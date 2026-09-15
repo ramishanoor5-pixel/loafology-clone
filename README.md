@@ -27,5 +27,7 @@ To recreate the layout, structure, and responsive behavior of a real-world baker
 🔧 Work in progress — additional sections (image/text blocks, testimonials, footer) are being added incrementally as part of ongoing internship tasks.
 
 ## 👩‍💻 Author
-**Ramisha Noor**
-Web Development Intern
+
+Hafiza Ramisha Noor
+
+Computer Science Student | Web Development Learner
