@@ -23,7 +23,6 @@ To recreate the layout, structure, and responsive behavior of a real-world baker
   - Store
   - Contact
 
-```
 ## 🚀 Status
 🔧 Work in progress — additional sections (image/text blocks, testimonials, footer) are being added incrementally as part of ongoing internship tasks.
 
