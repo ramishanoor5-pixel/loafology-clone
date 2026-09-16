@@ -48,14 +48,14 @@ body {
     gap: 48px;
     position: relative;
 }
-ul {
+.site-header ul {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     gap: 8px;
 }
-ul li {
+.site-header ul li {
     list-style: none;
     margin-left: 27px;
     margin-top: 27px;
@@ -63,7 +63,7 @@ ul li {
     margin-right: 27px;
     font-size: 14px;
 }
-ul li a {
+.site-header ul li a {
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 2px;
@@ -99,7 +99,7 @@ ul li a {
     font-size: 18px;
 }
 
-/* ---------- Slider (pure CSS, radio-input driven) ---------- */
+/*  Slider  */
 
 .container {
     width: 100%;
@@ -113,7 +113,6 @@ ul li a {
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 }
 
-/* Hide the actual radio buttons */
 .slide-radio {
     display: none;
 }
@@ -139,41 +138,35 @@ ul li a {
 
 .slide-caption {
     position: absolute;
-    bottom: 50px;
-    left: 40px;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
     color: #ffffff;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .slide-caption h2 {
-    height: 400px;
-    font-family: sans-serif ;
+    font-family: sans-serif;
     text-transform: uppercase;
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-    text-align: center;
-    font-size: 78px;
+    font-size: 48px;
     letter-spacing: 1px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .slide-caption p {
-    height: 60px;
-    font-size: 19px;
+    font-size: 16px;
     letter-spacing: 1px;
-     display: flex;
-    align-items:center ;
-    justify-content: center;
-    text-align: center;
 }
 
-/* When slide-2 is checked, shift the slides track left by one full width */
 #slide-2:checked ~ .slides {
     transform: translateX(-100%);
 }
 
-/* ---------- Dot navigation ---------- */
+/*  Dot navigation  */
 
 .slider-nav {
     position: absolute;
@@ -196,7 +189,6 @@ ul li a {
     transition: background-color 0.3s ease;
 }
 
-/* Highlight the dot that matches the currently checked slide */
 #slide-1:checked ~ .slider-nav label[for="slide-1"] {
     background-color: #ffffff;
 }
@@ -204,7 +196,7 @@ ul li a {
     background-color: #ffffff;
 }
 
-/* ---------- Arrow navigation ---------- */
+/*  Arrow navigation  */
 
 .slider-arrow {
     position: absolute;
@@ -219,7 +211,7 @@ ul li a {
     border-radius: 50%;
     z-index: 2;
     transition: background-color 0.2s ease;
-    display: none; /* hidden by default, shown per active slide below */
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -236,7 +228,6 @@ ul li a {
     right: 20px;
 }
 
-/* Show the correct arrow pair depending on which slide is active */
 #slide-1:checked ~ .show-on-slide-1 {
     display: flex;
 }
@@ -244,15 +235,6 @@ ul li a {
     display: flex;
 }
 
-@media (max-width: 700px) {
-    .slider-arrow {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
-    .slider-nav {
-        bottom: 12px;
-    }
-}
 .text h2 {
     justify-content: center;
     align-items: center;
@@ -260,8 +242,7 @@ ul li a {
     margin: 0px 0px 15px;
     padding-top: 40px;
     padding-left: 80px;
-    padding-right: 90px;
-    padding-top: 50px;
+    padding-right: 80px;
 }
 .text p{
     justify-content: center;
@@ -269,7 +250,7 @@ ul li a {
     text-align: center;
     margin: 0px 0px 15px;
     padding-left: 80px;
-    padding-right: 90px;
+    padding-right: 80px;
     padding-top: 10px;
     padding-bottom: 40px;
 }
@@ -285,7 +266,7 @@ ul li a {
     background-position: center;
 }
 
-/* ---------- Info / About section ---------- */
+/*  About section  */
 
 .info {
     display: flex;
@@ -333,7 +314,7 @@ ul li a {
     display: inline-block;
     margin-top: 10px;
     padding: 12px 28px;
-    background-color: #654813;
+    background-color: black;
     color: #fff;
     text-decoration: none;
     font-size: 13px;
@@ -342,7 +323,7 @@ ul li a {
     border-radius: 4px;
 }
 
-/* ---------- Menu section ---------- */
+/*  Menu section  */
 
 .menu {
     max-width: 1200px;
@@ -353,7 +334,7 @@ ul li a {
 .section-title {
     text-align: center;
     font-size: 30px;
-    color: #654813;
+    color: black;
     margin-bottom: 40px;
 }
 
@@ -394,153 +375,437 @@ ul li a {
     color: #654813;
 }
 
-/* ---------- Footer ---------- */
+/*  About page  */
 
-.site-footer {
-    background-color: #2c2013;
-    color: #f0e9dc;
-    padding: 60px 40px 0;
+.about-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 90px 20px 110px;
+    text-align: center;
 }
 
-.footer-container {
+.about-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #654813;
+    margin-bottom: 18px;
+}
+
+.about-headline {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.about-subline {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+/*  Locations & Order Now  */
+
+.branches-page {
+    max-width: 1100px;
+    margin: 60px auto 100px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.order-now-btn-wrap {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.branch-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.branch-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.branch-card:hover img {
+    transform: scale(1.05);
+}
+
+.branch-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
+    padding: 20px;
+}
+
+.branch-brand {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #f4c752;
+}
+
+.branch-tagline {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f4c752;
+    margin: 6px 0 14px;
+}
+
+.branch-location {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* Contact page */
+
+.contact-hero {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 14px;
+}
+
+.contact-intro {
+    font-size: 14px;
+    color: #555;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.contact-form-section {
+    max-width: 600px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.form-heading {
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    flex: 1;
+    text-align: left;
+}
+
+.form-field.full {
+    margin-bottom: 24px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.send-btn {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 12px 44px;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #333;
+}
+
+/*  footer  */
+
+.site-footer-locations {
+    background-color: #ffffff;
+    color: #333;
+    padding: 60px 40px 30px;
+    border-top: 1px solid #eee;
+}
+
+.footer-locations-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-    padding-bottom: 40px;
+    gap: 50px;
 }
 
-.footer-col {
+.footer-location-col {
     flex: 1;
-    min-width: 180px;
+    min-width: 220px;
 }
 
-.footer-col h3 {
-    font-size: 20px;
-    margin-bottom: 12px;
-}
-
-.footer-col h4 {
-    font-size: 15px;
-    letter-spacing: 1px;
+.footer-location-col h4 {
+    font-size: 12px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    color: #222;
 }
 
-.footer-col p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #cfc4af;
+.location-block {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #555;
 }
 
-.footer-col ul {
-    display: block;
+.location-block strong {
+    color: #222;
 }
 
-.footer-col ul li {
+.footer-location-col ul {
     list-style: none;
-    margin: 0 0 10px 0;
 }
 
-.footer-col ul li a {
-    color: #cfc4af;
+.footer-location-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-location-col ul li a {
+    font-size: 12px;
+    color: #555;
     text-decoration: none;
-    font-size: 14px;
     text-transform: none;
     letter-spacing: 0;
 }
 
-.footer-col ul li a:hover {
-    color: #ffffff;
+.footer-location-col ul li a:hover {
+    color: #000;
 }
 
-.footer-social {
-    display: flex;
-    gap: 16px;
-    font-size: 18px;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+.footer-logo-bottom {
     text-align: center;
-    padding: 20px 0;
-    font-size: 13px;
-    color: #b9ac95;
+    margin-top: 50px;
 }
 
-/* ---------- Responsive breakpoints ---------- */
+.footer-logo-badge {
+    background-image: url(logo.png.avif);
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 auto 12px;
+}
+
+.footer-logo-bottom p {
+    font-size: 11px;
+    color: #888;
+}
+
+/* to Make Responsive  */
 
 @media (max-width: 900px) {
-    .site-header {
-        height: auto;
-        padding: 20px 0;
-    }
+.site-header {
+    height: auto;
+    padding: 20px 0;
+}
 
-    ul {
-        flex-wrap: wrap;
-        row-gap: 10px;
-    }
+.site-header ul {
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
 
-    ul li {
-        margin: 8px 14px;
-    }
+.site-header ul li {
+    margin: 8px 14px;
+}
 
-    .info {
-        flex-direction: column;
-        margin: 50px auto;
-        text-align: center;
-    }
+.info {
+    flex-direction: column;
+    margin: 50px auto;
+    text-align: center;
+}
 
-    .menu-item {
-        flex: 0 0 200px;
-    }
+.info-image {
+    height: 320px;
+    width: 100%;
+}
+
+.menu-item {
+    flex: 0 0 200px;
+}
+
+.text p {
+        padding-left: 40px;
+        padding-right: 40px;
+}
+
+.shop-image {
+     height: 60vh;
+}
+
+.branches-grid {
+    grid-template-columns: 1fr;
+ }
 }
 
 @media (max-width: 600px) {
-    .anouncement-text,
-    .anouncement-link {
-        font-size: 11px;
-    }
+.anouncement-text,
+.anouncement-link {
+     font-size: 11px;
+}
 
-    .logo {
-        width: 80px;
-        height: 80px;
-    }
+.logo {
+    width: 80px;
+    height: 80px;
+}
 
-    ul li a {
-        font-size: 12px;
-    }
+.site-header ul li a {
+     font-size: 12px;
+}
 
-    .info-text h2,
-    .section-title {
-        font-size: 24px;
-    }
+.info-text h2,
+.section-title {
+    font-size: 24px;
+}
 
-    .slider-arrow {
-        font-size: 14px;
-        padding: 6px 10px;
-    }
+.slider-arrow {
+    font-size: 14px;
+     padding: 6px 10px;
+}
 
-    .slide-caption {
-        left: 20px;
-        bottom: 30px;
-    }
+.slider-nav {
+    bottom: 12px;
+}
 
-    .slide-caption h2 {
-        font-size: 20px;
-    }
+.slide-caption {
+    left: 20px;
+    bottom: 30px;
+}
 
-    .slide-caption p {
-        font-size: 12px;
-    }
+.slide-caption h2 {
+    height: auto;
+    font-size: 20px;
+}
 
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
+.slide-caption p {
+     height: auto;
+    font-size: 12px;
+}
 
-    .footer-social {
-        justify-content: center;
-    }
+.text h2 {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+ }
+
+.text p {
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+ }
+
+.shop-image {
+    height: 40vh;
+}
+
+.footer-container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-social {
+     justify-content: center;
+}
+
+.about-page {
+    padding: 60px 20px 80px;
+}
+
+.about-subline {
+    line-height: 1.8;
+}
+
+.branch-brand {
+    font-size: 20px;
+}
+
+.branch-tagline {
+    font-size: 11px;
+}
+
+.branch-location {
+     font-size: 11px;
+}
+
+.form-row {
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-locations-container {
+    flex-direction: column;
+    text-align: center;
+     gap: 30px;
+}
+
+.footer-location-col ul {
+    padding: 0;
+}
 }
