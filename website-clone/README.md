@@ -1,7 +1,8 @@
+
 # Loafology Website Clone — Task 1
 
 ## 📌 Overview
-This project is **Task 1** of my Web Development Internship at ELITE.Org. It is a **front-end clone** of the [Loafology Bakery & Cafe] website, built from scratch for **learning and practice purposes only**.
+This project is **Task 1** of my Web Development Internship . It is a **front-end clone** of the [Loafology Bakery & Cafe] website, built from scratch for **learning and practice purposes only**.
 
 ## 🎯 Goal
 To recreate the layout, structure, and responsive behavior of a real-world bakery/café website as a hands-on exercise in front-end web development.
@@ -22,10 +23,8 @@ To recreate the layout, structure, and responsive behavior of a real-world baker
   - Store
   - Contact
 
-```
-## 🚀 Status
-🔧 Work in progress — additional sections (image/text blocks, testimonials, footer) are being added incrementally as part of ongoing internship tasks.
 
 ## 👩‍💻 Author
-**Ramisha Noor**
-Web Development Intern
+
+Hafiza Ramisha Noor
+Computer Science Student | Web Development Learner

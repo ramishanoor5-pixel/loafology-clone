@@ -29,26 +29,149 @@
             <li><div class="search-logo">
                <i class="fa-solid fa-magnifying-glass"></i> 
              </div></li>
-            <li><a href="#"> about</a></li>
-            <li> <a href="#"> locations</a> </li>
+            <li><a href="about.html"> about</a></li>
+            <li> <a href="locations.html"> locations</a> </li>
             <li> <a href="#"> store</a></li>
             <li><div class="logo"></div> </li>
-             <li> <a href="#"> order now</a></li>
-              <li> <a href="#"> contact</a></li>
+             <li> <a href="order-now.html"> order now</a></li>
+              <li> <a href="contact.html"> contact</a></li>
                <li> <a href="#"> maps</a></li>
                <li><i class="fa-regular fa-user"></i></li>
                <li> <i class="fa-solid fa-bag-shopping"></i></li>
           </ul>
         </div>
     </header>
-    <secttion class="container">
-        <div class="slider-wrapper">
-            <div class="slider">
-<img id="slider-1" src="https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_0495.jpg?v=1727433904&amp;width=2400" alt="Exterior view of Loafology Bakery &amp; Café with indoor patrons visible through large windows and empty rattan chairs and tables set on the patio area." />
 
-<img id="slider-2" src="https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_9969-1-1_5866a946-ebfc-4ebb-a8b4-9e669cd6b1ef.jpg?height=1200&amp;v=1727432767" alt="Interior view of Loafology Bakery &amp; Café with wooden chairs and tables near a glass window displaying a logo with &quot;L&quot; and &quot;Est. 2016.&quot; Outside, greenery can be seen through the window." />
+    <section class="container">
+        <div class="slider-wrapper">
+
+            <!-- Hidden radio inputs drive which slide is shown (pure CSS, no JS) -->
+            <input type="radio" name="slider" id="slide-1" class="slide-radio" checked>
+            <input type="radio" name="slider" id="slide-2" class="slide-radio">
+
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_0495.jpg?v=1727433904&amp;width=2400" alt="Exterior view of Loafology Bakery &amp; Café with indoor patrons visible through large windows and empty rattan chairs and tables set on the patio area." srcset="https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_0495.jpg?v=1727433904&amp;width=352 352w, https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_0495.jpg?v=1727433904&amp;width=832 832w, https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_0495.jpg?v=1727433904&amp;width=1200 1200w, https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_0495.jpg?v=1727433904&amp;width=1920 1920w, https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_0495.jpg?v=1727433904&amp;width=2400 2400w" width="2400" height="1600" loading="lazy" sizes="100%" class="distilled-full-width-img">
+                    <div class="slide-caption">
+                        <h2> Loafology Aurasquare <br> F-11 Islamabad</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://loafology.com/cdn/shop/files/Loafology_Bakery_and_Caf_-_DSC09258.jpg?v=1727432475&amp;width=2400" alt="A modern restaurant interior at Loafology Bakery and Café featuring wooden booths with orange seating, black-and-white framed maps on the wall, and stylish chairs with black-striped upholstery." srcset="https://loafology.com/cdn/shop/files/Loafology_Bakery_and_Caf_-_DSC09258.jpg?v=1727432475&amp;width=352 352w, https://loafology.com/cdn/shop/files/Loafology_Bakery_and_Caf_-_DSC09258.jpg?v=1727432475&amp;width=832 832w, https://loafology.com/cdn/shop/files/Loafology_Bakery_and_Caf_-_DSC09258.jpg?v=1727432475&amp;width=1200 1200w, https://loafology.com/cdn/shop/files/Loafology_Bakery_and_Caf_-_DSC09258.jpg?v=1727432475&amp;width=1920 1920w, https://loafology.com/cdn/shop/files/Loafology_Bakery_and_Caf_-_DSC09258.jpg?v=1727432475&amp;width=2400 2400w" width="2400" height="3000" loading="lazy" sizes="100%" class="distilled-full-width-img">
+                    <div class="slide-caption">
+                        <h2> aesthetic and spacious interior</h2>
+                        <p> Same great food &amp; staff!</p>
+                    </div>
+                </div>
             </div>
+
+            <label for="slide-2" class="slider-arrow slider-prev show-on-slide-1" aria-label="Previous slide">&#10094;</label>
+            <label for="slide-1" class="slider-arrow slider-prev show-on-slide-2" aria-label="Previous slide">&#10094;</label>
+
+            <label for="slide-2" class="slider-arrow slider-next show-on-slide-1" aria-label="Next slide">&#10095;</label>
+            <label for="slide-1" class="slider-arrow slider-next show-on-slide-2" aria-label="Next slide">&#10095;</label>
+
+            <div class="slider-nav">
+                <label for="slide-1" class="dot"></label>
+                <label for="slide-2" class="dot"></label>
+            </div>
+
         </div>
-    </secttion>
+    </section>
+      
+       <div class="text">
+        <h2> In 2016, Loafology began with a mission to bring delicious, long fermentation, sourdough breads and cafe/bistro style cuisine to those who love food.</h2>
+        <p> Everything at Loafology is made by hand, created with the best ingredients that we can source. We don’t believe in using artificial additives, improvers or sugar in our breads. We invite you to experiment and try our range of breads, buttery pastries, cakes, salads, sandwiches and meals to find the ones that speak to your taste buds.</p>
+       </div>
+     <div class="shop-image"> </div>
+    <section class="info">
+        <div class="info-image">
+        
+            <img src="https://loafology.com/cdn/shop/files/Loafology_Bakery_Caf_-_IMG_9438-2.jpg?v=1727433622" />
+          
+        </div>
+        <div class="info-text">
+            <h2>LOAFOLOGY ALL DAY DINING</h2>
+            <p>
+               We created a space for chilling with friends or catching up for a meeting either indoors or surrounded by lush green plants outdoors Our casual all day menu is guided by seasonal ingredients offering fresh, healthy options with great coffee and juices.
+            </p>
+        </div>
+    </section>
+
+    <section class="branches-page">
+        <h2 class="section-title">MENUS</h2>
+
+        <div class="branches-grid">
+            <a href="#" class="branch-card">
+                <img src="blue-area.webp" alt="Loafology Blue Area branch interior">
+            </a>
+            <a href="#" class="branch-card">
+                <img src="aura-square.webp" alt="Loafology F-11 Aurasquare branch interior">
+            </a>
+            <a href="#" class="branch-card">
+                <img src="enclave.webp" alt="Loafology Diplomatic Enclave branch interior">
+            </a>
+            <a href="#" class="branch-card">
+                <img src="gold-crest.webp" alt="Loafology DHA Lahore branch interior">
+            </a>
+        </div>
+        <div class="order-now-btn-wrap">
+            <a href="order-now.html" class="info-btn">Order Now</a>
+        </div>
+    </section>
+
+           <!-- Footer -->
+    <footer class="site-footer-locations">
+        <div class="footer-locations-container">
+
+            <div class="footer-location-col">
+                <h4>Islamabad</h4>
+
+                <div class="location-block">
+                    <p><strong>Loafology Blue Area:</strong> Jinnah Avenue, Blue Area, Islamabad</p>
+                    <p>Landline: (051) 000-0000</p>
+                    <p>WhatsApp: +92 300 0000000</p>
+                </div>
+
+                <div class="location-block">
+                    <p><strong>Loafology F-11:</strong> Aura Square, F-11 Markaz, Islamabad</p>
+                    <p>Landline: (051) 000-0000</p>
+                    <p>WhatsApp: +92 300 0000000</p>
+                </div>
+
+                <div class="location-block">
+                    <p><strong>Loafology Diplomatic:</strong> Diplomatic Enclave, Islamabad</p>
+                    <p>Landline: (051) 000-0000</p>
+                </div>
+            </div>
+
+            <div class="footer-location-col">
+                <h4>Lahore</h4>
+
+                <div class="location-block">
+                    <p><strong>Loafology DHA:</strong> Sector DD, Phase 4, DHA, Lahore</p>
+                    <p>Landline: (042) 000-0000</p>
+                    <p>WhatsApp: +92 300 0000000</p>
+                </div>
+            </div>
+
+            <div class="footer-location-col">
+                <h4>Customer Support</h4>
+                <ul>
+                    <li><a href="#">Privacy <br>Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="locations.html">Locations</a></li> 
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-logo-bottom">
+            <div class="footer-logo-badge"></div>
+            <p>&copy; 2026 Loafology Bakery & Cafe</p>
+        </div>
+    </footer>
+
 </body>
 </html>
