@@ -27,4 +27,5 @@ To recreate the layout, structure, and responsive behavior of a real-world baker
 ## 👩‍💻 Author
 
 Hafiza Ramisha Noor
+
 Computer Science Student | Web Development Learner
